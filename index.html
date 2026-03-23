@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Registration Form | DevOps Assignment</title>
+    <meta name="description" content="Modern accessible feedback form for student registration">
+    
+    <!-- PWA & DevOps Polish -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "GovernmentService",
+        "name": "Student Feedback Form",
+        "description": "Submit feedback about student services",
+        "provider": {
+            "@type": "CollegeOrUniversity",
+            "name": "DevOps Training Institute"
+        },
+        "areaServed": "Campus Wide",
+        "availableChannel": "https://example.com/feedback"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Navigation for Keyboard/Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main id="main-content" class="page-container fade-in" role="main" aria-labelledby="form-title">
+        <div class="form-container" role="form" aria-label="Student feedback registration">
+            <header class="form-header">
+                <h1 id="form-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> <span class="form-header__title">Student Feedback Registration</span></h1>
+                <p>Share your valuable feedback with us</p>
+            </header>
+
+            <form id="feedbackForm" novalidate aria-describedby="form-status">
+                <!-- Name Field -->
+                <div class="input-group">
+                    <input type="text" 
+                           id="name" 
+                           required 
+                           aria-describedby="nameError"
+                           aria-labelledby="nameLabel">
+                    <label id="nameLabel" for="name">Student Name</label>
+                    <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                    <div class="error" id="nameError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="input-group">
+                    <input type="email" 
+                           id="email" 
+                           required 
+                           pattern="[^@]+@[^@]+\\.[a-z]+"
+                           aria-describedby="emailError"
+                           aria-labelledby="emailLabel">
+                    <label id="emailLabel" for="email">Email ID</label>
+                    <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+                    <div class="error" id="emailError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Mobile Field -->
+                <div class="input-group">
+                    <input type="tel" 
+                           id="mobile" 
+                           required 
+                           pattern="[0-9]{10}"
+                           maxlength="10"
+                           aria-describedby="mobileError"
+                           aria-labelledby="mobileLabel">
+                    <label id="mobileLabel" for="mobile">Mobile Number</label>
+                    <i class="fas fa-phone input-icon" aria-hidden="true"></i>
+                    <div class="error" id="mobileError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Department Field (static label avoids overlap with placeholder option) -->
+                <div class="input-group input-group--select">
+                    <label id="deptLabel" class="input-label-static" for="dept">Department</label>
+                    <div class="input-group__control">
+                        <select id="dept" 
+                                required 
+                                aria-describedby="deptError"
+                                aria-labelledby="deptLabel">
+                            <option value="">Select Department</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ENTC">ENTC</option>
+                            <option value="MECH">MECH</option>
+                        </select>
+                        <i class="fas fa-building input-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="error" id="deptError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Gender Fieldset -->
+                <fieldset class="gender-group">
+                    <legend id="gender-legend">Gender</legend>
+                    <div class="gender-pills" role="radiogroup" aria-labelledby="gender-legend">
+                        <input type="radio" 
+                               name="gender" 
+                               id="male" 
+                               value="Male" 
+                               required>
+                        <label for="male"><i class="fas fa-mars" aria-hidden="true"></i> Male</label>
+                        
+                        <input type="radio" 
+                               name="gender" 
+                               id="female" 
+                               value="Female" 
+                               required>
+                        <label for="female"><i class="fas fa-venus" aria-hidden="true"></i> Female</label>
+                    </div>
+                    <div class="error" id="genderError" role="alert" aria-live="polite"></div>
+                </fieldset>
+
+                <!-- Feedback Field -->
+                <div class="input-group">
+                    <textarea id="feedback" 
+                              maxlength="500" 
+                              required
+                              aria-describedby="feedbackError charCounter"
+                              aria-labelledby="feedbackLabel"></textarea>
+                    <label id="feedbackLabel" for="feedback">Feedback Comments</label>
+                    <i class="fas fa-comment-dots input-icon" aria-hidden="true"></i>
+                    <span class="char-counter" id="charCounter" aria-live="polite">0/500</span>
+                    <div class="error" id="feedbackError" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" 
+                            id="submitBtn"
+                            aria-describedby="form-status">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span>Submit Feedback</span>
+                    </button>
+                    <button type="reset" 
+                            id="resetBtn"
+                            onclick="event.preventDefault(); document.getElementById('feedbackForm').reset();">
+                        <i class="fas fa-redo" aria-hidden="true"></i>
+                        Reset Form
+                    </button>
+                </div>
+            </form>
+
+            <div id="form-status" class="sr-only" aria-live="polite" role="status"></div>
+        </div>
+
+        <!-- Success Modal - Accessible -->
+        <div class="success-message" 
+             id="successModal" 
+             role="dialog" 
+             aria-modal="true" 
+             aria-labelledby="success-title"
+             aria-describedby="success-desc"
+             tabindex="-1"
+             hidden>
+            <div class="success-icon">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+            </div>
+            <h3 id="success-title">Thank You!</h3>
+            <p id="success-desc">Your feedback has been submitted successfully. We appreciate your time and valuable input.</p>
+            <button type="button" class="modal-close" id="successModalClose" aria-label="Close success message">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

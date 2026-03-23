@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest",
+  "name": "Student Feedback Form - DevOps Assignment",
+  "short_name": "Feedback Form",
+  "description": "Accessible modern student feedback registration form",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "categories": ["education", "productivity", "form"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijk2IiBmaWxsPSIjNjY3ZWVhIi8+CjxwYXRoIGQ9Ik0xMjMgMTIxQzEyMyAxMjcgMTE5IDEzMCAxMTMgMTMwSDc5QzczIDEzMCA2OSA5NyA2OSA5M0gxMjNDNjkgNzkgNzMgNzYgNzkgNzZIMTMzQzEzNyA3NiAxNDEgODAgMTQxIDg2WiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2IiBmaWxsPSIjNjY3ZWVhIi8+CjxwYXRoIGQ9Ik0zMjcgMzIzQzMyNyAzMzcgMzE5IDM0MCAzMTMgMzQwSDIxM0MyMDcgMzQwIDE5OSAyOTcgMTk5IDI5M0gyOTlDMjk5IDI0OSAyOTMgMjQ2IDI5NyAyNDZIMTMzQzEyOSAyNDYgMTIzIDI1MCAxMjMgMjU2WiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "New Feedback",
+      "short_name": "Feedback",
+      "description": "Submit new student feedback",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijk2IiBmaWxsPSIjNjY3ZWVhIi8+CjxwYXRoIGQ9Ik0xMjMgMTIxQzEyMyAxMjcgMTE5IDEzMCAxMTMgMTMwSDc5QzczIDEzMCA2OSA5NyA2OSA5M0gxMjNDNjkgNzkgNzMgNzYgNzkgNzZIMTMzQzEzNyA3NiAxNDEgODAgMTQxIDg2WiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

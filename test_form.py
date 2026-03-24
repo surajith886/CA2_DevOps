@@ -43,7 +43,7 @@ def submit_valid_feedback():
     driver.find_element(By.ID, "submitBtn").click()
 
     wait.until(EC.visibility_of_element_located((By.ID, "success-title")))
-    print("Test 2: Feedback submitted successfully! ✅")
+    print("Test 2: Feedback submitted successfully! ")
 
 
 def empty_field_validation():
@@ -59,7 +59,7 @@ def empty_field_validation():
     print("Invalid Mobile Number")
     print("Select Gender")
     print("Select Department")
-    print("Feedback must be at least 10 words ✅")
+    print("Feedback must be at least 10 words ")
 
 
 def invalid_email_test():
@@ -82,7 +82,7 @@ def invalid_email_test():
 
     driver.find_element(By.ID, "submitBtn").click()
 
-    print("Test 4: Invalid Email Checked ✅")
+    print("Test 4: Invalid Email Checked ")
 
 
 def invalid_mobile_test():
@@ -105,7 +105,7 @@ def invalid_mobile_test():
 
     driver.find_element(By.ID, "submitBtn").click()
 
-    print("Test 5: Invalid Mobile Checked ✅")
+    print("Test 5: Invalid Mobile Checked ")
 
 
 def dropdown_test():
@@ -117,7 +117,7 @@ def dropdown_test():
     selected = dropdown.first_selected_option.text
 
     if selected == "CSE":
-        print("Test 6: Dropdown Working ✅")
+        print("Test 6: Dropdown Working ")
 
 
 def reset_button_test():
@@ -129,7 +129,7 @@ def reset_button_test():
     value = driver.find_element(By.ID, "name").get_attribute("value")
 
     if value == "":
-        print("Test 7: Reset Button Working ✅")
+        print("Test 7: Reset Button Working ")
 
 
 try:

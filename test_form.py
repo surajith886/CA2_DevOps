@@ -21,7 +21,7 @@ wait = WebDriverWait(driver, 20)
 def open_page():
     driver.get(BASE)
     wait.until(EC.visibility_of_element_located((By.ID, "name")))
-    print("Test 1: Page Opened Successfully ✅")
+    print("Test 1: Page Opened Successfully ")
 
 
 def submit_valid_feedback():
